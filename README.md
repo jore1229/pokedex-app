@@ -29,13 +29,13 @@ Contains needed images and resources used in the application.
 
 ### Configurations Directory
 #### Configurations
-Contains application settings in JSON files which can be accessed anywhere in the application.
+- Contains application settings in JSON files which can be accessed anywhere in the application.
 
 #### Environments
-Allows switching between development and production modes.
+- Allows switching between development and production modes.
 
 #### Proxies
-Defines needed proxy addressing for application routing.
+- Defines needed proxy addressing for application routing.
 
 ### Styles Directory
 Provides styling for the whole project and for localized components. Also includes themes and other customization.
