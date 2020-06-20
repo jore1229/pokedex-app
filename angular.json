@@ -27,11 +27,23 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "extractCss": true,
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              {
+                "input":"src/styles/darkstyle-theme.scss",
+                "bundleName":"darkstyle-theme",
+                "inject":false
+              },
+              {
+                "input":"src/styles/lightstyle-theme.scss",
+                "bundleName":"lightstyle-theme",
+                "inject":false
+              }
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,10 +105,21 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              {
+                "input":"src/styles/darkstyle-theme.scss",
+                "bundleName":"darkstyle-theme",
+                "inject":false
+              },
+              {
+                "input":"src/styles/lightstyle-theme.scss",
+                "bundleName":"lightstyle-theme",
+                "inject":false
+              }
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js"
+            ]
           }
         },
         "lint": {

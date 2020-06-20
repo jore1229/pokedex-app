@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { MaterialModule } from './material.module';
+import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
+
 
 @NgModule({
     imports: [
@@ -12,14 +13,15 @@ import { MaterialModule } from './material.module';
       ReactiveFormsModule,
       RouterModule,
     ],
-    declarations: [],
+    declarations: [
+      DynamicStyleComponent
+    ],
     exports: [
       CommonModule,
       FormsModule,
       ReactiveFormsModule,
       RouterModule,
-  
-      MaterialModule,
+      DynamicStyleComponent
     ]
   })
   export class SharedModule {}
