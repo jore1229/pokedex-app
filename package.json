@@ -30,12 +30,12 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.8",
-    "@angular/cli": "~9.1.8",
-    "@angular/compiler-cli": "~9.1.11",
-    "@types/node": "^12.11.1",
-    "@types/jasmine": "~3.5.0",
+    "@angular-devkit/build-angular": "^0.901.9",
+    "@angular/cli": "^10.0.0",
+    "@angular/compiler-cli": "^9.1.11",
+    "@types/jasmine": "^3.5.11",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -48,5 +48,17 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
-  }
+  },
+  "description": "This project serves as a scaffold base for building new Angular projects. Features included are:",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jore1229/angular-scaffold-structure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jore1229/angular-scaffold-structure/issues"
+  },
+  "homepage": "https://github.com/jore1229/angular-scaffold-structure#readme"
 }

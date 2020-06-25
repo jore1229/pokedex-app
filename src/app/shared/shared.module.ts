@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { HomePageComponent } from './home-page/home-page.component';
 import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
+
 
 
 @NgModule({
@@ -14,14 +16,16 @@ import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
       RouterModule,
     ],
     declarations: [
-      DynamicStyleComponent
+      HomePageComponent,
+      DynamicStyleComponent,
     ],
     exports: [
       CommonModule,
       FormsModule,
       ReactiveFormsModule,
       RouterModule,
-      DynamicStyleComponent
+      HomePageComponent,
+      DynamicStyleComponent,
     ]
   })
   export class SharedModule {}
