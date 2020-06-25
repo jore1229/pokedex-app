@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { HomePageComponent } from './home-page/home-page.component';
 import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
 
 
@@ -16,7 +15,6 @@ import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
       RouterModule,
     ],
     declarations: [
-      HomePageComponent,
       DynamicStyleComponent,
     ],
     exports: [
@@ -24,7 +22,6 @@ import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
       FormsModule,
       ReactiveFormsModule,
       RouterModule,
-      HomePageComponent,
       DynamicStyleComponent,
     ]
   })
