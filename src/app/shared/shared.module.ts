@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
+import { NavHeaderComponent } from './nav-header/nav-header.component';
 
 
 
@@ -15,14 +15,14 @@ import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
       RouterModule,
     ],
     declarations: [
-      DynamicStyleComponent,
+      NavHeaderComponent
     ],
     exports: [
       CommonModule,
       FormsModule,
       ReactiveFormsModule,
       RouterModule,
-      DynamicStyleComponent,
+      NavHeaderComponent
     ]
   })
   export class SharedModule {}

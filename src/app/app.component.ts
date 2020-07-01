@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PokeApiService } from './data/poke-api.service';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-scaffold-base';
+  title = 'pokedex-app';
 
+    constructor(pokeApiService: PokeApiService) {
+      pokeApiService.getPokemon("pikachu");
+    }
   
 }

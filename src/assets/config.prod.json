@@ -1,0 +1,8 @@
+{
+    "env": {
+        "name": "prod"
+    },
+    "poke_api": {
+        "url": "https://pokeapi.co/api/v2/"
+    }
+}

@@ -2,11 +2,11 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-dynamic-style',
-  templateUrl: './dynamic-style.component.html',
-  styleUrls: ['./dynamic-style.component.scss']
+  selector: 'app-nav-header',
+  templateUrl: './nav-header.component.html',
+  styleUrls: ['./nav-header.component.scss']
 })
-export class DynamicStyleComponent implements OnInit {
+export class NavHeaderComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     this.loadTheme('lightstyle-theme.css')

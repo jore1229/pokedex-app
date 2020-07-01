@@ -1,0 +1,941 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200701.154207.47912.0.001.json",
+    "dumpEventTime": "2020-07-01T15:42:07Z",
+    "dumpEventTimeStamp": "1593632527526",
+    "processId": 47912,
+    "threadId": null,
+    "cwd": "H:\\Personal Projects\\pokedex-app",
+    "commandLine": [
+      "I:\\Nodejs\\node.exe",
+      "H:\\Personal Projects\\pokedex-app\\node_modules\\@ngtools\\webpack\\src\\type_checker_worker.js",
+      "9d93e901-158a-4cf9-ba1b-2f0582ffcfeb"
+    ],
+    "nodejsVersion": "v12.16.3",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.3",
+      "v8": "7.8.279.23-node.35",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1g",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.3/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.19041",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 11839156,
+        "nice": 0,
+        "sys": 8225609,
+        "idle": 192731156,
+        "irq": 453171
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 470953,
+        "nice": 0,
+        "sys": 613328,
+        "idle": 211711484,
+        "irq": 290984
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 11381781,
+        "nice": 0,
+        "sys": 2450953,
+        "idle": 198963031,
+        "irq": 811984
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 414828,
+        "nice": 0,
+        "sys": 4937859,
+        "idle": 207443078,
+        "irq": 2407359
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 11268562,
+        "nice": 0,
+        "sys": 1041218,
+        "idle": 200485984,
+        "irq": 282546
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 372593,
+        "nice": 0,
+        "sys": 49875,
+        "idle": 212373296,
+        "irq": 8328
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 11079062,
+        "nice": 0,
+        "sys": 970406,
+        "idle": 200746296,
+        "irq": 276640
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 300578,
+        "nice": 0,
+        "sys": 66390,
+        "idle": 212428796,
+        "irq": 10156
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10752500,
+        "nice": 0,
+        "sys": 966859,
+        "idle": 201076406,
+        "irq": 283890
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 375609,
+        "nice": 0,
+        "sys": 46343,
+        "idle": 212373812,
+        "irq": 7906
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10620062,
+        "nice": 0,
+        "sys": 927812,
+        "idle": 201247890,
+        "irq": 281781
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 418390,
+        "nice": 0,
+        "sys": 49609,
+        "idle": 212327765,
+        "irq": 9046
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10521515,
+        "nice": 0,
+        "sys": 923390,
+        "idle": 201350843,
+        "irq": 285296
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 450765,
+        "nice": 0,
+        "sys": 53062,
+        "idle": 212291921,
+        "irq": 10062
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10454734,
+        "nice": 0,
+        "sys": 898343,
+        "idle": 201442671,
+        "irq": 281484
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 479218,
+        "nice": 0,
+        "sys": 82593,
+        "idle": 212233937,
+        "irq": 17203
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10395265,
+        "nice": 0,
+        "sys": 881328,
+        "idle": 201519156,
+        "irq": 278468
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 510109,
+        "nice": 0,
+        "sys": 54687,
+        "idle": 212230953,
+        "irq": 10687
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10343546,
+        "nice": 0,
+        "sys": 869078,
+        "idle": 201583125,
+        "irq": 276828
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 497125,
+        "nice": 0,
+        "sys": 52671,
+        "idle": 212245953,
+        "irq": 10296
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10294750,
+        "nice": 0,
+        "sys": 840453,
+        "idle": 201660546,
+        "irq": 271078
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 479812,
+        "nice": 0,
+        "sys": 53265,
+        "idle": 212262671,
+        "irq": 10484
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10274359,
+        "nice": 0,
+        "sys": 800875,
+        "idle": 201720515,
+        "irq": 270140
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 482546,
+        "nice": 0,
+        "sys": 80281,
+        "idle": 212232921,
+        "irq": 13078
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8143578,
+        "nice": 0,
+        "sys": 2734687,
+        "idle": 201917484,
+        "irq": 310062
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8231828,
+        "nice": 0,
+        "sys": 2413343,
+        "idle": 202150578,
+        "irq": 281312
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 9303812,
+        "nice": 0,
+        "sys": 2742765,
+        "idle": 200749171,
+        "irq": 281125
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8365312,
+        "nice": 0,
+        "sys": 2488734,
+        "idle": 201941687,
+        "irq": 276140
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8231343,
+        "nice": 0,
+        "sys": 2463484,
+        "idle": 202100906,
+        "irq": 278593
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8339515,
+        "nice": 0,
+        "sys": 2562718,
+        "idle": 201893500,
+        "irq": 283671
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 9172937,
+        "nice": 0,
+        "sys": 2446609,
+        "idle": 201176187,
+        "irq": 282234
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 6974093,
+        "nice": 0,
+        "sys": 2450640,
+        "idle": 203371000,
+        "irq": 260015
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7805140,
+        "nice": 0,
+        "sys": 2540234,
+        "idle": 202450359,
+        "irq": 260859
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7752281,
+        "nice": 0,
+        "sys": 3178921,
+        "idle": 201864531,
+        "irq": 261203
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8113187,
+        "nice": 0,
+        "sys": 3443125,
+        "idle": 201239421,
+        "irq": 266890
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7707296,
+        "nice": 0,
+        "sys": 2495921,
+        "idle": 202592515,
+        "irq": 254781
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7878937,
+        "nice": 0,
+        "sys": 2618828,
+        "idle": 202297968,
+        "irq": 260546
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7815750,
+        "nice": 0,
+        "sys": 3243812,
+        "idle": 201736171,
+        "irq": 264531
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7957390,
+        "nice": 0,
+        "sys": 3272390,
+        "idle": 201565953,
+        "irq": 266562
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7893593,
+        "nice": 0,
+        "sys": 2457359,
+        "idle": 202444781,
+        "irq": 264078
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 14312812,
+        "nice": 0,
+        "sys": 3528671,
+        "idle": 194954250,
+        "irq": 371109
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 912984,
+        "nice": 0,
+        "sys": 1116593,
+        "idle": 210766156,
+        "irq": 59953
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 12602187,
+        "nice": 0,
+        "sys": 2622125,
+        "idle": 197571421,
+        "irq": 392906
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 556140,
+        "nice": 0,
+        "sys": 603296,
+        "idle": 211636281,
+        "irq": 325890
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 19145859,
+        "nice": 0,
+        "sys": 8694187,
+        "idle": 184955671,
+        "irq": 139171
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 18531515,
+        "nice": 0,
+        "sys": 9087406,
+        "idle": 185176796,
+        "irq": 146765
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 19948062,
+        "nice": 0,
+        "sys": 8423093,
+        "idle": 184424562,
+        "irq": 135296
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 18864656,
+        "nice": 0,
+        "sys": 9522328,
+        "idle": 184408734,
+        "irq": 140218
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8146328,
+        "nice": 0,
+        "sys": 2690250,
+        "idle": 201959140,
+        "irq": 286468
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8396125,
+        "nice": 0,
+        "sys": 2560203,
+        "idle": 201839390,
+        "irq": 272484
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 11128859,
+        "nice": 0,
+        "sys": 6367781,
+        "idle": 195299078,
+        "irq": 282375
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7579218,
+        "nice": 0,
+        "sys": 2927593,
+        "idle": 202288906,
+        "irq": 302531
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8109406,
+        "nice": 0,
+        "sys": 2600906,
+        "idle": 202085406,
+        "irq": 258656
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8009468,
+        "nice": 0,
+        "sys": 2434984,
+        "idle": 202351265,
+        "irq": 266328
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 8076187,
+        "nice": 0,
+        "sys": 2513984,
+        "idle": 202205546,
+        "irq": 272312
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7932281,
+        "nice": 0,
+        "sys": 2675750,
+        "idle": 202187687,
+        "irq": 335906
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7626281,
+        "nice": 0,
+        "sys": 2392281,
+        "idle": 202777156,
+        "irq": 260453
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 28108828,
+        "nice": 0,
+        "sys": 9093265,
+        "idle": 175593625,
+        "irq": 1722156
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 10045515,
+        "nice": 0,
+        "sys": 2720078,
+        "idle": 200030109,
+        "irq": 261609
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7823468,
+        "nice": 0,
+        "sys": 2341187,
+        "idle": 202631046,
+        "irq": 253312
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7875984,
+        "nice": 0,
+        "sys": 2241468,
+        "idle": 202678250,
+        "irq": 252125
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7905687,
+        "nice": 0,
+        "sys": 2500578,
+        "idle": 202389437,
+        "irq": 265343
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 7662656,
+        "nice": 0,
+        "sys": 2247593,
+        "idle": 202885453,
+        "irq": 260828
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3970X 32-Core Processor ",
+        "speed": 3693,
+        "user": 18277593,
+        "nice": 0,
+        "sys": 8142796,
+        "idle": 186375312,
+        "irq": 1723265
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Ethernet 3",
+        "internal": false,
+        "mac": "34:97:f6:31:9d:33",
+        "address": "fd9e:d8bf:5fd5:1:15b4:b0f1:c2e2:30d4",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet 3",
+        "internal": false,
+        "mac": "34:97:f6:31:9d:33",
+        "address": "fd9e:d8bf:5fd5:1:712d:b924:be3:5e74",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet 3",
+        "internal": false,
+        "mac": "34:97:f6:31:9d:33",
+        "address": "fe80::15b4:b0f1:c2e2:30d4",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 10
+      },
+      {
+        "name": "Ethernet 3",
+        "internal": false,
+        "mac": "34:97:f6:31:9d:33",
+        "address": "172.24.1.100",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "DESKTOP-BBLAJ8N"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff7f0642449",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+11577"
+    },
+    {
+      "pc": "0x00007ff7f06469a9",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+29337"
+    },
+    {
+      "pc": "0x00007ff7f0645828",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24856"
+    },
+    {
+      "pc": "0x00007ff7f077d8c2",
+      "symbol": "v8::base::CPU::has_sse+68658"
+    },
+    {
+      "pc": "0x00007ff7f0f99bbe",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff7f0f81c91",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff7f0e4e1ec",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff7f0e59420",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff7f0e55f44",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x00007ff7f0e4b743",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff7f0e49db4",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2452"
+    },
+    {
+      "pc": "0x00007ff7f0e6afbd",
+      "symbol": "v8::internal::Factory::NewFillerObject+61"
+    },
+    {
+      "pc": "0x00007ff7f0bd1871",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+1665"
+    },
+    {
+      "pc": "0x00007ff7f13e6c4d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+546637"
+    },
+    {
+      "pc": "0x00000362e685f7f9",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2156937216,
+    "totalCommittedMemory": 2156937216,
+    "usedMemory": 2133233960,
+    "availableMemory": 49517584,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 8388608,
+        "committedMemory": 8388608,
+        "capacity": 4189824,
+        "used": 214912,
+        "available": 3974912
+      },
+      "old_space": {
+        "memorySize": 2006069248,
+        "committedMemory": 2006069248,
+        "capacity": 1994848656,
+        "used": 1994373888,
+        "available": 474768
+      },
+      "code_space": {
+        "memorySize": 3837952,
+        "committedMemory": 3837952,
+        "capacity": 3137344,
+        "used": 3137344,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 3149824,
+        "committedMemory": 3149824,
+        "capacity": 990640,
+        "used": 990640,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 134832128,
+        "committedMemory": 134832128,
+        "capacity": 134145840,
+        "used": 134145840,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 397312,
+        "committedMemory": 397312,
+        "capacity": 338528,
+        "used": 338528,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 4189824,
+        "used": 0,
+        "available": 4189824
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 164.796,
+    "kernelCpuSeconds": 3.562,
+    "cpuConsumptionPercent": 1.40944,
+    "maxRss": 2261975040,
+    "pageFaults": {
+      "IORequired": 1343882,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 4020,
+      "writes": 12
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "AMDRMPATH": "C:\\Program Files\\AMD\\RyzenMaster\\",
+    "APPDATA": "C:\\Users\\jonat\\AppData\\Roaming",
+    "BROWSERSLIST_IGNORE_OLD_DATA": "1",
+    "COLORTERM": "truecolor",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-BBLAJ8N",
+    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "CUDA_PATH": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.0",
+    "CUDA_PATH_V11_0": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.0",
+    "DataGrip": "I:\\Jetbrains\\DataGrip 2020.1.2\\bin;",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "GIT_ASKPASS": "i:\\Microsoft VS Code\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh",
+    "GoLand": "I:\\Jetbrains\\GoLand 2020.1\\bin;",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\jonat",
+    "IntelliJ IDEA": "I:\\Jetbrains\\IntelliJ IDEA 2020.1\\bin;",
+    "JetBrains Rider": "I:\\Jetbrains\\JetBrains Rider 2020.1.0\\bin;",
+    "LANG": "en_US.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\jonat\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-BBLAJ8N",
+    "NUMBER_OF_PROCESSORS": "64",
+    "NVCUDASAMPLES11_0_ROOT": "C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v11.0",
+    "NVCUDASAMPLES_ROOT": "C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v11.0",
+    "NVTOOLSEXT_PATH": "C:\\Program Files\\NVIDIA Corporation\\NvToolsExt\\",
+    "OneDrive": "C:\\Users\\jonat\\OneDrive - purdue.edu",
+    "OneDriveCommercial": "C:\\Users\\jonat\\OneDrive - purdue.edu",
+    "OneDriveConsumer": "C:\\Users\\jonat\\OneDrive",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "undefined",
+    "OS": "Windows_NT",
+    "Path": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.0\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.0\\libnvvp;I:\\Python\\Python38\\Scripts\\;I:\\Python\\Python38\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;I:\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;I:\\MATLAB\\R2020a\\bin;I:\\PuTTY\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;I:\\Nodejs\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2020.1.0\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\GitExtensions\\;C:\\Users\\jonat\\AppData\\Local\\Microsoft\\WindowsApps;I:\\Microsoft VS Code\\Microsoft VS Code\\bin;I:\\Jetbrains\\PyCharm 2020.1\\bin;I:\\Jetbrains\\IntelliJ IDEA 2020.1\\bin;I:\\Jetbrains\\DataGrip 2020.1.2\\bin;I:\\Jetbrains\\WebStorm 2020.1\\bin;I:\\Jetbrains\\JetBrains Rider 2020.1.0\\bin;I:\\Jetbrains\\GoLand 2020.1\\bin;C:\\Users\\jonat\\AppData\\Roaming\\npm;I:\\Markdown Monster;C:\\Users\\jonat\\AppData\\Local\\Microsoft\\WindowsApps",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "AMD64 Family 23 Model 49 Stepping 0, AuthenticAMD",
+    "PROCESSOR_LEVEL": "23",
+    "PROCESSOR_REVISION": "3100",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Users\\jonat\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PyCharm": "I:\\Jetbrains\\PyCharm 2020.1\\bin;",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\jonat\\AppData\\Local\\Temp",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.46.1",
+    "TMP": "C:\\Users\\jonat\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-BBLAJ8N",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-BBLAJ8N",
+    "USERNAME": "jonat",
+    "USERPROFILE": "C:\\Users\\jonat",
+    "VSCODE_GIT_ASKPASS_MAIN": "i:\\Microsoft VS Code\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js",
+    "VSCODE_GIT_ASKPASS_NODE": "I:\\Microsoft VS Code\\Microsoft VS Code\\Code.exe",
+    "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-8df8b0e008-sock",
+    "WEBPACK_DEV_SERVER": "true",
+    "WebStorm": "I:\\Jetbrains\\WebStorm 2020.1\\bin;",
+    "windir": "C:\\WINDOWS"
+  },
+  "sharedObjects": [
+    "I:\\Nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+    "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll"
+  ]
+}

@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { DynamicStyleComponent } from './dynamic-style.component';
+import { NavHeaderComponent } from './nav-header.component';
 
-describe('DynamicStyleComponent', () => {
-  let component: DynamicStyleComponent;
-  let fixture: ComponentFixture<DynamicStyleComponent>;
+describe('NavHeaderComponent', () => {
+  let component: NavHeaderComponent;
+  let fixture: ComponentFixture<NavHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DynamicStyleComponent ]
+      declarations: [ NavHeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DynamicStyleComponent);
+    fixture = TestBed.createComponent(NavHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

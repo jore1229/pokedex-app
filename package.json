@@ -1,5 +1,5 @@
 {
-  "name": "angular-scaffold-base",
+  "name": "pokedex-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -49,16 +49,16 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   },
-  "description": "This project serves as a scaffold base for building new Angular projects. Features included are:",
+  "description": "Pokedex project",
   "main": "karma.conf.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jore1229/angular-scaffold-structure.git"
+    "url": "git+https://github.com/jore1229/pokedex-app.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jore1229/angular-scaffold-structure/issues"
+    "url": "https://github.com/jore1229/pokedex-app/issues"
   },
-  "homepage": "https://github.com/jore1229/angular-scaffold-structure#readme"
+  "homepage": "https://github.com/jore1229/pokedex-app#readme"
 }
