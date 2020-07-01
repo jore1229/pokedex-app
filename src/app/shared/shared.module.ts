@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
 
 
+
 @NgModule({
     imports: [
       CommonModule,
@@ -14,14 +15,14 @@ import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
       RouterModule,
     ],
     declarations: [
-      DynamicStyleComponent
+      DynamicStyleComponent,
     ],
     exports: [
       CommonModule,
       FormsModule,
       ReactiveFormsModule,
       RouterModule,
-      DynamicStyleComponent
+      DynamicStyleComponent,
     ]
   })
   export class SharedModule {}
