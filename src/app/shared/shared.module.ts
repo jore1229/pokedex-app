@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { NavHeaderComponent } from './nav-header/nav-header.component';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { PokemonAlbumComponent } from './pokemon-album/pokemon-album.component';
 
 
 
@@ -15,14 +17,17 @@ import { NavHeaderComponent } from './nav-header/nav-header.component';
       RouterModule,
     ],
     declarations: [
-      NavHeaderComponent
+      NavHeaderComponent,
+      PokemonCardComponent,
+      PokemonAlbumComponent
     ],
     exports: [
       CommonModule,
       FormsModule,
       ReactiveFormsModule,
       RouterModule,
-      NavHeaderComponent
+      NavHeaderComponent,
+      PokemonAlbumComponent
     ]
   })
   export class SharedModule {}

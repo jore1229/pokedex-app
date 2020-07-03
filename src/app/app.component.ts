@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'pokedex-app';
 
     constructor(pokeApiService: PokeApiService) {
-      pokeApiService.getPokemon("pikachu");
+      //pokeApiService.getPokemon("pikachu");
     }
   
 }
