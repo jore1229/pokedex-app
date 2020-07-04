@@ -15,7 +15,7 @@ export class PokemonCollection {
             var pokemon = new Pokemon();
             pokemon.name = result.name;
             pokemon = this.LoadPokemonImage(pokemon);
-            pokemon = this.ExtractPokemonColors(pokemon, result.url);
+            pokemon = this.ExtractPokemonSpeciesInformation(pokemon, result.url);
             pokemon = this.ParsePokemonURL(pokemon, result.url);
 
             // Add Pokemon to the collection
@@ -24,15 +24,18 @@ export class PokemonCollection {
     }
 
     private LoadPokemonImage(pokemon: Pokemon): Pokemon {
-        pokemon.image_url = "/assets/pokemon-front-images/" + pokemon.name + ".png";
+        pokemon.imageUrl = "/assets/pokemon-front-images/" + pokemon.name + ".png";
         return pokemon;
     } 
 
-    private ExtractPokemonColors(pokemon: Pokemon, dataUrl: string): Pokemon {
+    private ExtractPokemonSpeciesInformation(pokemon: Pokemon, dataUrl: string): Pokemon {
         var colorUrl = dataUrl.replace("pokemon","pokemon-species");
         this.pokeApiService.getPokemonColor(colorUrl).subscribe(
             result => { 
+                //console.log(result);
                 pokemon.color = result.color.name;
+                pokemon.number = result.pokedex_numbers[0].entry_number;
+                pokemon.flavorText = result.flavor_text_entries[0].flavor_text.replace(/[^a-zA-Z .éÉ]/g, " ");
             }
         );
         return pokemon;
@@ -40,8 +43,9 @@ export class PokemonCollection {
 
     private ParsePokemonURL(pokemon: Pokemon, dataUrl: string): Pokemon {
         this.pokeApiService.getPokemonData(dataUrl).subscribe(
-            result => { 
+            result => {   
                 this.ExtractPokemonTypes(pokemon, result);
+                this.ExtractPokemonHeightAndWeight(pokemon, result);
             }
         );
         return pokemon; 
@@ -55,8 +59,8 @@ export class PokemonCollection {
     }
 
     private ExtractPokemonHeightAndWeight(pokemon: Pokemon, apiData: any): Pokemon {
-        pokemon.height = apiData['height'];
-        pokemon.weight = apiData['weight'];
+        pokemon.height = apiData['height'] * 0.3281;
+        pokemon.weight = apiData['weight'] * 0.2205;
         return pokemon; 
     }
 }

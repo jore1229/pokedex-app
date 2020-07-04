@@ -1,5 +1,5 @@
-<div type="button" class="btn-light card pokemon-card border-dark mb-4 my-4">
-  <img class="card-img-top img-fluid" src={{this.pokemon.image_url}} alt="Pokemon Sprite Image">
+<div type="button" class="btn-light card pokemon-card border-dark mb-4 my-2">
+  <img class="card-img-top img-fluid" src={{this.pokemon.imageUrl}} alt="Pokemon Sprite Image">
   <div *ngIf="this.pokemon.types.length == 0; else typeDefined">
     <img class="pokemon-type-1" src="/assets/pokemon-type-images/unknown.png" alt="Pokemon Type 1 Image">
   </div>
@@ -9,10 +9,15 @@
   <div *ngIf="this.pokemon.types.length == 2">
     <img class="pokemon-type-2" src="/assets/pokemon-type-images/{{this.pokemon.types[1]}}.png" alt="Pokemon Type 2 Image">
   </div>
+  <span class="pokemon-number text-body h5"><strong>{{this.pokemon.number}}</strong></span>
   <div class="card-body pokemon-text-box border-dark" [ngStyle]="this.assignCardColor(this.pokemon)">
-    <h5 class="card-title pokemon-text text-body">{{this.pokemon.name | titlecase }}</h5>
-    <p class="card-text text-body">Height: {{this.pokemon.height}}</p>
-    <p class="card-text text-body">Weight: {{this.pokemon.weight}}</p>
-    <p class="card-text text-light"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <h5 class="card-title text-body">{{this.pokemon.name | titlecase }}</h5>
+    <p class="card-text text-body"><small>
+      Height: {{this.pokemon.height | number:'1.1-1'}} <span class="h6 small">[ft]</span><br>
+      Weight: {{this.pokemon.weight | number:'1.1-1'}} <span class="h6 small">[lbs]</span></small>
+    </p>
+    <p class="card-text text-body pokemon-flavor-text"><small><span class="h6 small">
+      {{this.pokemon.flavorText}}</span></small>
+    </p>
   </div>
 </div>

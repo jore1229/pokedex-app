@@ -1,10 +1,10 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="card-deck">
-      <div *ngFor="let pokemonElement of this.pokeCollection.pokemonList">
-        {{this.InjectPokemonAttributes(pokemonElement)}}
-        <ng-container *ngComponentOutlet="pokemonCard; injector: this.attributeInjector"></ng-container>
+<div class="container">
+  <div class="row initial-space">
+      <div class="card-deck">
+        <div *ngFor="let pokemonElement of this.pokeCollection.pokemonList">
+          {{this.InjectPokemonAttributes(pokemonElement)}}
+          <ng-container *ngComponentOutlet="pokemonCard; injector: this.attributeInjector"></ng-container>
+        </div>
       </div>
-    </div>
   </div>
 </div>
