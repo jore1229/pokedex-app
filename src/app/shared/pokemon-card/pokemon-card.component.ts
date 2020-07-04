@@ -23,7 +23,7 @@ export class PokemonCardComponent implements OnInit {
   assignCardColor(pokemon: Pokemon) {
     const rgbArray = this.colorToRGBA(this.pokemon.color);
     let styles = {
-      'background-color': 'rgba(' + rgbArray[0] + ',' + rgbArray[1] + ',' + rgbArray[2] + ', 0.1'
+      'background-color': 'rgba(' + rgbArray[0] + ',' + rgbArray[1] + ',' + rgbArray[2] + ', 0.4'
     };
     return styles;
   }

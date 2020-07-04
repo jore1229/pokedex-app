@@ -9,31 +9,54 @@ export class PokemonCollection {
 
     ParseAPIresponse(response: any) {
         this.pokemonCount = response.count;
-        this.pokemonCount = 20; // Force this to 20 for now for simple testing
         
         response['results'].forEach(result => {
+            // Assign Pokemon data parameters
             var pokemon = new Pokemon();
             pokemon.name = result.name;
+            pokemon = this.LoadPokemonImage(pokemon);
+            pokemon = this.ExtractPokemonColors(pokemon, result.url);
             pokemon = this.ParsePokemonURL(pokemon, result.url);
+
+            // Add Pokemon to the collection
             this.pokemonList.push(pokemon);
-            //console.log(result);
         });
     }
 
-    ParsePokemonURL(pokemon: Pokemon, dataUrl: string): Pokemon {
-        this.pokeApiService.getPokemonData(dataUrl).subscribe(
-            result => { 
-                pokemon.image_url = result.sprites.front_default;
-            }
-        );
+    private LoadPokemonImage(pokemon: Pokemon): Pokemon {
+        pokemon.image_url = "/assets/pokemon-front-images/" + pokemon.name + ".png";
+        return pokemon;
+    } 
+
+    private ExtractPokemonColors(pokemon: Pokemon, dataUrl: string): Pokemon {
         var colorUrl = dataUrl.replace("pokemon","pokemon-species");
         this.pokeApiService.getPokemonColor(colorUrl).subscribe(
             result => { 
-                console.log(result);
                 pokemon.color = result.color.name;
             }
         );
-
         return pokemon;
+    }
+
+    private ParsePokemonURL(pokemon: Pokemon, dataUrl: string): Pokemon {
+        this.pokeApiService.getPokemonData(dataUrl).subscribe(
+            result => { 
+                this.ExtractPokemonTypes(pokemon, result);
+            }
+        );
+        return pokemon; 
+    }
+
+    private ExtractPokemonTypes(pokemon: Pokemon, apiData: any): Pokemon {
+        apiData['types'].forEach(type => {
+            pokemon.types.push(type['type']['name']);
+        });
+        return pokemon; 
+    }
+
+    private ExtractPokemonHeightAndWeight(pokemon: Pokemon, apiData: any): Pokemon {
+        pokemon.height = apiData['height'];
+        pokemon.weight = apiData['weight'];
+        return pokemon; 
     }
 }
