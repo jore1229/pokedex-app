@@ -21,7 +21,6 @@ export class NavHeaderComponent implements OnInit {
     newPreconnectElement.rel = 'preconnect';
     newPreconnectElement.href = AppConfig.settings.poke_api.base_url;
     headElement.appendChild(newPreconnectElement);
-    console.log(headElement);
   }
 
   loadTheme(cssFile: string) {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PokeApiService } from './data/poke-api.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,7 @@ import { PokeApiService } from './data/poke-api.service';
 export class AppComponent {
   title = 'pokedex-app';
 
-    constructor(pokeApiService: PokeApiService) {
-      //pokeApiService.getPokemon("pikachu");
+    constructor() {
     }
   
 }

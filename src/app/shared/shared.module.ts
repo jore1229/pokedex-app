@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { HomePageComponent } from './home-page/home-page.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { PokemonAlbumComponent } from './pokemon-album/pokemon-album.component';
+import { PokemonStatsComponent } from './pokemon-stats/pokemon-stats.component';
 
 
 
@@ -17,9 +19,11 @@ import { PokemonAlbumComponent } from './pokemon-album/pokemon-album.component';
       RouterModule,
     ],
     declarations: [
+      HomePageComponent,
       NavHeaderComponent,
       PokemonCardComponent,
-      PokemonAlbumComponent
+      PokemonAlbumComponent,
+      PokemonStatsComponent
     ],
     exports: [
       CommonModule,

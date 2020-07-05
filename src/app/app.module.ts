@@ -7,6 +7,8 @@ import { AppConfig } from './configurations/app-config/app.config';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../app/configurations/environments/environment';
 
 export function initializeApp(appConfig: AppConfig) {
   return () => appConfig.load();
@@ -21,12 +23,13 @@ export function initializeApp(appConfig: AppConfig) {
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
 
     // App
     AppRoutingModule,
 
     // Shared
-    SharedModule
+    SharedModule,
   ],
   providers: [
     AppConfig,

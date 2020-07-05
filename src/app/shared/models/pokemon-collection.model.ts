@@ -48,8 +48,8 @@ export class PokemonCollection {
 
     private AssignHeightWeightTypes(pokemonData: any) {
         let index = this.pokemonList.map(function(pokemon) { return pokemon.name; }).indexOf(pokemonData.name)
-        this.pokemonList[index].height = pokemonData.height;
-        this.pokemonList[index].weight = pokemonData.weight;
+        this.pokemonList[index].height = pokemonData.height*0.336;  // Convert to lbs
+        this.pokemonList[index].weight = pokemonData.weight*0.22;   // Convert to ft
         pokemonData['types'].forEach(type => {
             this.pokemonList[index].types.push(type['type']['name']);
         });
