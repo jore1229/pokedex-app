@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { publishReplay, refCount } from 'rxjs/operators';
-import { AppConfig } from '../configurations/app-config/app.config';
+import { AppConfig } from '../../configurations/app-config/app.config';
 import { Observable } from 'rxjs';
 
 @Injectable({

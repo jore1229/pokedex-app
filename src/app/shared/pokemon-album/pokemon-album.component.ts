@@ -1,8 +1,7 @@
 import { Component, OnInit, Injector, ReflectiveInjector } from '@angular/core';
-import { PokeApiService } from '../../data/poke-api.service';
 import { Pokemon } from '../models/pokemon.model';
-import { PokemonCollection } from '../models/pokemon-collection.model';
 import { PokemonCardComponent, POKEMON } from '../pokemon-card/pokemon-card.component';
+import { PokeCollectionService } from 'src/app/data/collection/poke-collection.service';
 
 
 @Component({
@@ -14,13 +13,12 @@ export class PokemonAlbumComponent implements OnInit {
   attributeInjector: Injector;
   parentInjector: Injector;
   pokemonCard = PokemonCardComponent;
-  pokeCollection: PokemonCollection;
+  pokemonList = new Array<Pokemon>();
 
-  constructor(injector: Injector, pokeApiService: PokeApiService) {
+  constructor(injector: Injector, pokeCollectionService: PokeCollectionService ) {
     // Initialize the parent component injector
     this.parentInjector = injector;
-    this.pokeCollection = new PokemonCollection(pokeApiService);
-    this.pokeCollection.ExtractPokemonData(0, 25);
+    this.pokemonList = pokeCollectionService.ExtractPokemonData(0, 25);
   }
 
   ngOnInit() {
