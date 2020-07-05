@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PokeApiService {
-  apiUrl: string = AppConfig.settings.poke_api.url;
+  apiUrl: string = AppConfig.settings.poke_api.base_url + AppConfig.settings.poke_api.base_api;
 
   constructor(private http: HttpClient) { 
   }

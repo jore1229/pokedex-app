@@ -3,6 +3,7 @@
         "name": "prod"
     },
     "poke_api": {
-        "url": "https://pokeapi.co/api/v2/"
+        "base_url": "https://pokeapi.co",
+        "base_api": "/api/v2/"
     }
 }

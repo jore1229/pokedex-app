@@ -3,6 +3,7 @@ export interface IAppConfig {
         name: string;
     },
     poke_api: {
-        url: string;
+        base_url: string;
+        base_api: string;
     }
 }
