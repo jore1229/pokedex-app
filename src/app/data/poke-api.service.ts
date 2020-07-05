@@ -14,7 +14,7 @@ export class PokeApiService {
   }
 
   getPokemonList(): Observable<any> {
-    const url = this.apiUrl + "pokemon/?limit=20"
+    const url = this.apiUrl + "pokemon/?limit=151"
     return this.createObservable(url);
   }
 

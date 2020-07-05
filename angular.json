@@ -51,8 +51,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "src/app/configurations/environments/environment.ts",
+                  "with": "src/app/configurations/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -120,7 +120,9 @@
               }
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           }
         },
