@@ -7,7 +7,7 @@ import { PokemonStatsComponent } from './shared/pokemon-stats/pokemon-stats.comp
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent},
-  { path: 'stats', component: PokemonStatsComponent},
+  { path: ':pokemon', component: PokemonStatsComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },  // redirect to home page
   { path: '**', component: PageNotFoundComponent },
 ];
