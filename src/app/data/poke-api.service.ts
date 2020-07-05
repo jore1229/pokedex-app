@@ -13,17 +13,13 @@ export class PokeApiService {
   constructor(private http: HttpClient) { 
   }
 
-  getPokemonList(): Observable<any> {
-    const url = this.apiUrl + "pokemon/?limit=151"
+  getPokemonList(offset: Number, numberOfPokemon: Number): Observable<any> {
+    const url = this.apiUrl + "pokemon/?" + String(offset) + "&limit=" + String(numberOfPokemon);
     return this.createObservable(url);
   }
 
   getPokemonData(dataUrl: string): Observable<any> {
     return this.createObservable(dataUrl);
-  }
-
-  getPokemonColor(colorUrl: string): Observable<any> {
-    return this.createObservable(colorUrl);
   }
 
   private createObservable(url: string): Observable<any> {

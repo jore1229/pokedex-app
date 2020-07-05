@@ -4,6 +4,7 @@ import { Pokemon } from '../models/pokemon.model';
 import { PokemonCollection } from '../models/pokemon-collection.model';
 import { PokemonCardComponent, POKEMON } from '../pokemon-card/pokemon-card.component';
 
+
 @Component({
   selector: 'app-pokemon-album',
   templateUrl: './pokemon-album.component.html',
@@ -15,26 +16,14 @@ export class PokemonAlbumComponent implements OnInit {
   pokemonCard = PokemonCardComponent;
   pokeCollection: PokemonCollection;
 
-  constructor(pokeApiService: PokeApiService, injector: Injector) {
+  constructor(injector: Injector, pokeApiService: PokeApiService) {
     // Initialize the parent component injector
     this.parentInjector = injector;
-
-    // Provide service object
     this.pokeCollection = new PokemonCollection(pokeApiService);
-    
-    // Poll API for a complete list of pokemon
-    pokeApiService.getPokemonList()
-      .subscribe(
-        response => this.ProcessAPIresponse(response)
-      );
-    
+    this.pokeCollection.ExtractPokemonData(0, 25);
   }
 
   ngOnInit() {
-  }
-
-  ProcessAPIresponse(apiResponse: any) {
-    this.pokeCollection.ParseAPIresponse(apiResponse);
   }
 
   InjectPokemonAttributes(pokemon: Pokemon) {
