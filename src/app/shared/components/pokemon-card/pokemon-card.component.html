@@ -10,7 +10,7 @@
     <img class="pokemon-type-2" src="/assets/pokemon-type-images/{{this.pokemon.types[1]}}.png" alt="Pokemon Type 2 Image">
   </div>
   <span class="pokemon-number text-body h5"><strong>{{this.pokemon.number}}</strong></span>
-  <div class="card-body pokemon-text-box border-dark" [ngStyle]="this.assignCardColor(this.pokemon)">
+  <div class="card-body pokemon-text-box border-dark" [ngStyle]="this.AssignCardColor(this.pokemon)">
     <h5 class="card-title text-body">{{this.pokemon.name | titlecase }}</h5>
     <p class="card-text text-body"><small>
       Height: {{this.pokemon.height | number:'1.1-1'}} <span class="h6 small">[ft]</span><br>

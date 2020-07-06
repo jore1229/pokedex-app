@@ -1,7 +1,15 @@
 <app-nav-header></app-nav-header>
 
 <div class="card my-5">
-    <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card rounded-circle mx-auto d-block my-5" alt="...">
+    <div class="row">
+        <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card mx-auto my-5" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+        <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card mx-auto my-5" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+
+    </div>
+    <div class="row">
+        <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card mx-auto my-5" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+        <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card mx-auto my-5" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+    </div>
     <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Pokemon } from '../../models/pokemon.model';
+import { ColorConverter } from '../../models/color-converter.model';
 import { PokeCollectionService } from 'src/app/data/collection/poke-collection.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class PokemonStatsComponent implements OnInit {
   pokemonCollection = new Array<Pokemon>();
   pokemonName: string;
   pokemon: Pokemon;
+  colorToRGBA = ColorConverter.colorToRGBA;
 
   constructor(private route: ActivatedRoute, private pokeCollectionService: PokeCollectionService) { 
     this.route.params.subscribe( params => this.pokemonName = params.pokemon );
@@ -29,4 +31,13 @@ export class PokemonStatsComponent implements OnInit {
     let index = this.pokemonCollection.map(function(pokemon) { return pokemon.name; }).indexOf(this.pokemonName);
     this.pokemon = this.pokemonCollection[index];
   }
+
+  AssignProfileColor(pokemon: Pokemon) {
+    const rgbArray = this.colorToRGBA(this.pokemon.color);
+    let styles = {
+      'background-color': 'rgba(' + rgbArray[0] + ',' + rgbArray[1] + ',' + rgbArray[2] + ', 0.1'
+    };
+    return styles;
+  }
+
 }
