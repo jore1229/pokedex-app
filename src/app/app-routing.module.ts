@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { HomePageComponent } from './shared/home-page/home-page.component';
-import { PokemonStatsComponent } from './shared/pokemon-stats/pokemon-stats.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component'
+import { HomePageComponent } from './shared/components/home-page/home-page.component';
+import { PokemonStatsComponent } from './shared/components/pokemon-stats/pokemon-stats.component';
 
 
 const routes: Routes = [

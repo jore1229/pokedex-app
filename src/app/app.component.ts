@@ -15,5 +15,8 @@ export class AppComponent {
       // Perform default extraction
       this.pokeExtractionService.ExtractPokemonData(AppConfig.settings.poke_api.starting_index, AppConfig.settings.poke_api.display_count);
     }
-  
+
+    OnActivate(event) {
+      window.scroll(0,0);
+  }
 }

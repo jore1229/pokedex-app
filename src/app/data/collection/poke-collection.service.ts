@@ -7,8 +7,8 @@ import { Pokemon } from 'src/app/shared/models/pokemon.model';
 })
 export class PokeCollectionService {
   private pokemonCollection = new Array<Pokemon>(); 
-  private messageSource = new BehaviorSubject(this.pokemonCollection);
-  currentMessage = this.messageSource.asObservable();
+  private notificationSource = new BehaviorSubject(this.pokemonCollection);
+  collectionNotification = this.notificationSource.asObservable();
 
   constructor() { }
 
@@ -31,6 +31,6 @@ export class PokeCollectionService {
   }
 
   ExtractionCompleted() {
-    this.messageSource.next(this.pokemonCollection);
+    this.notificationSource.next(this.pokemonCollection);
   }
 }

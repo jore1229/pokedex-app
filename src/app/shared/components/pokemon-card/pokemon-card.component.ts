@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, InjectionToken, Input } from '@angular/core';
-import { Pokemon } from '../models/pokemon.model';
-import { ColorConverter } from '../models/color-converter.model';
+import { Pokemon } from '../../models/pokemon.model';
+import { ColorConverter } from '../../models/color-converter.model';
 
 export const POKEMON = new InjectionToken<Pokemon>('pokemon', { providedIn: 'root',  factory: () => new Pokemon() } ); 
 

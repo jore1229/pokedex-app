@@ -1,5 +1,5 @@
 import { Component, OnInit, Injector, ReflectiveInjector } from '@angular/core';
-import { Pokemon } from '../models/pokemon.model';
+import { Pokemon } from '../../models/pokemon.model';
 import { PokemonCardComponent, POKEMON } from '../pokemon-card/pokemon-card.component';
 import { PokeCollectionService } from 'src/app/data/collection/poke-collection.service';
 
@@ -22,7 +22,7 @@ export class PokemonAlbumComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pokeCollectionService.currentMessage.subscribe(updatedCollection => {
+    this.pokeCollectionService.collectionNotification.subscribe(updatedCollection => {
       this.pokemonCollection = updatedCollection;
       this.isAlbumLoaded = false;
     });

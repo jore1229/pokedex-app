@@ -8,8 +8,8 @@ export class ThemeService {
   private isThemeLoaded = false;
   private isLightModeEnabled = true;
   private isThemeSettingsChanged = false;
-  private messageSource = new BehaviorSubject(this.isThemeSettingsChanged);
-  currentMessage = this.messageSource.asObservable();
+  private notificationSource = new BehaviorSubject(this.isThemeSettingsChanged);
+  themeNotification = this.notificationSource.asObservable();
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class ThemeService {
     if(this.isThemeLoaded != isThemeLoaded) {
       this.isThemeLoaded = isThemeLoaded;
       this.isThemeSettingsChanged = true;
-      this.messageSource.next(this.isThemeSettingsChanged);
+      this.notificationSource.next(this.isThemeSettingsChanged);
     }
   }
 
@@ -25,7 +25,7 @@ export class ThemeService {
     if(this.isLightModeEnabled != isLightModeEnabled) {
       this.isLightModeEnabled = isLightModeEnabled;
       this.isThemeSettingsChanged = true;
-      this.messageSource.next(this.isThemeSettingsChanged);
+      this.notificationSource.next(this.isThemeSettingsChanged);
     }
   }
 

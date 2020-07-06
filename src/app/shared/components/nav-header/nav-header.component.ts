@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { AppConfig } from '../../configurations/app-config/app.config';
+import { AppConfig } from '../../../configurations/app-config/app.config';
 import { ThemeService } from 'src/app/data/theme/theme.service';
 
 @Component({
@@ -22,7 +22,7 @@ export class NavHeaderComponent implements OnInit {
     newPreconnectElement.href = AppConfig.settings.poke_api.base_url;
     headElement.appendChild(newPreconnectElement);
 
-    this.themeService.currentMessage.subscribe(themeSettings => {
+    this.themeService.themeNotification.subscribe(themeSettings => {
       this.LoadTheme(this.themeService.GetLightModeStatus());
     })
 
