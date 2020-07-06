@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row initial-space">
       <div class="card-deck">
-        <div *ngFor="let pokemonElement of this.pokemonList">
-          {{this.InjectPokemonAttributes(pokemonElement)}}
-          <ng-container *ngComponentOutlet="pokemonCard; injector: this.attributeInjector"></ng-container>
-        </div>
+        <ng-template [ngIf]="!this.isAlbumLoaded">
+          <div *ngFor="let pokemonElement of this.pokemonCollection; let last=last">
+            {{this.InjectPokemonAttributes(pokemonElement)}}
+            <ng-container *ngComponentOutlet="pokemonCard; injector: this.attributeInjector"></ng-container>
+            <ng-template [ngIf]="last">
+              <ng-template ng-init="this.isAlbumLoaded=true"></ng-template>
+            </ng-template>
+          </div>
+        </ng-template>
       </div>
   </div>
 </div>

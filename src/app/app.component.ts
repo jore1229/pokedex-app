@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PokeExtractionService } from './data/extraction/poke-extraction.service';
+import { AppConfig } from './configurations/app-config/app.config';
 
 
 @Component({
@@ -9,7 +11,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'pokedex-app';
 
-    constructor() {
+    constructor(private pokeExtractionService: PokeExtractionService) {
+      // Perform default extraction
+      this.pokeExtractionService.ExtractPokemonData(AppConfig.settings.poke_api.starting_index, AppConfig.settings.poke_api.display_count);
     }
   
 }

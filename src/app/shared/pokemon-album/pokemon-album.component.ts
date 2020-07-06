@@ -10,18 +10,22 @@ import { PokeCollectionService } from 'src/app/data/collection/poke-collection.s
   styleUrls: ['./pokemon-album.component.scss']
 })
 export class PokemonAlbumComponent implements OnInit {
+  isAlbumLoaded: boolean = true;
   attributeInjector: Injector;
   parentInjector: Injector;
   pokemonCard = PokemonCardComponent;
-  pokemonList = new Array<Pokemon>();
+  pokemonCollection = new Array<Pokemon>();
 
-  constructor(injector: Injector, pokeCollectionService: PokeCollectionService ) {
+  constructor(injector: Injector, private pokeCollectionService: PokeCollectionService) {
     // Initialize the parent component injector
     this.parentInjector = injector;
-    this.pokemonList = pokeCollectionService.ExtractPokemonData(0, 25);
   }
 
   ngOnInit() {
+    this.pokeCollectionService.currentMessage.subscribe(updatedCollection => {
+      this.pokemonCollection = updatedCollection;
+      this.isAlbumLoaded = false;
+    });
   }
 
   InjectPokemonAttributes(pokemon: Pokemon) {
