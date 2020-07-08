@@ -24,7 +24,7 @@ import { PokemonStatsComponent } from './components/pokemon-stats/pokemon-stats.
       PokeLoadingProgressComponent,
       PokemonCardComponent,
       PokemonAlbumComponent,
-      PokemonStatsComponent
+      PokemonStatsComponent,
     ],
     exports: [
       CommonModule,

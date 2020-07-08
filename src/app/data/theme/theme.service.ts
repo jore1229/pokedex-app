@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ThemeService {
   private isThemeLoaded = false;
-  private isLightModeEnabled = true;
+  private isLightModeEnabled = false;
   private isThemeSettingsChanged = false;
   private notificationSource = new BehaviorSubject(this.isThemeSettingsChanged);
   themeNotification = this.notificationSource.asObservable();

@@ -6,6 +6,6 @@
         "base_url": "https://pokeapi.co",
         "base_api": "/api/v2/",
         "starting_index": 0,
-        "display_count": 25
+        "display_count": 50
     }
 }

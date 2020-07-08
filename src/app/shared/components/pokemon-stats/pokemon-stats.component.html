@@ -1,19 +1,23 @@
 <app-nav-header></app-nav-header>
 
+<div class="initial-spacing"></div>
 <div class="card my-5">
-    <div class="row">
-        <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card mx-auto my-5" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
-        <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card mx-auto my-5" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
-
-    </div>
-    <div class="row">
-        <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card mx-auto my-5" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
-        <img src={{this.pokemon.imageUrl}} class="card-img-top pokemon-card mx-auto my-5" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div *ngIf="this.pokemon != null">
+        <div class="text-center">
+            <img src={{this.pokemon.frontImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+            <span class="wrap">
+                <img src={{this.pokemon.frontShinyImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+            </span>
+        </div>
+        <div class="text-center">
+            <img src={{this.pokemon.backImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+            <img src={{this.pokemon.backShinyImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
     </div>
 </div>
 

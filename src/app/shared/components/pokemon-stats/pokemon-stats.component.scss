@@ -1,14 +1,38 @@
-.container { 
-    margin-top: 4rem;
-}
-
-.initial-space {
-    margin-top: 4rem;
+.initial-spacing {
+    margin-top: 5rem;
 }
 
 .pokemon-card {
-    width: 25%;
-    height: 25%;
+    width: 15%;
+    height: 15%;
     border: solid;
     border-radius: 25%;
+    margin-top: 1rem;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.wrap:before {
+    content:"";
+    z-index:10;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 208px;
+    height: 208px;
+    background:linear-gradient(transparent 0%,
+      rgba(255, 255, 255, 0.1) 45%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0.1) 55%,
+      transparent 100%);
+    transform: rotate(-45deg);
+    animation: shine 1s infinite forwards;
+  }
+  @keyframes shine{
+    0%{top: -50px; left: 650px;}
+    100%{top: 100px; left: 800px;}
 }

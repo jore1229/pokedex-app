@@ -46,7 +46,10 @@ export class PokeExtractionService {
   private AssignPokemonNameAndSprite(pokemonData: any) {
     let pokemon = new Pokemon();
     pokemon.name = pokemonData.name;
-    pokemon.imageUrl = "/assets/pokemon-front-images/" + pokemonData.name + ".png";
+    pokemon.frontImageUrl = "/assets/pokemon-front-images/" + pokemonData.name + ".png";
+    pokemon.backImageUrl = "/assets/pokemon-back-images/" + pokemonData.name + ".png";
+    pokemon.frontShinyImageUrl = "/assets/pokemon-front-shiny-images/" + pokemonData.name + ".png";
+    pokemon.backShinyImageUrl = "/assets/pokemon-back-shiny-images/" + pokemonData.name + ".png";
     this.pokeCollectionService.AddPokemonToCollection(pokemon);
   }
 

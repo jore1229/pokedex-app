@@ -6,5 +6,8 @@ export class Pokemon {
     weight: Number;
     types: Array<string> = new Array<string>();
     flavorText: string;
-    imageUrl: string;
+    frontImageUrl: string;
+    backImageUrl: string;
+    frontShinyImageUrl: string;
+    backShinyImageUrl: string;
 }

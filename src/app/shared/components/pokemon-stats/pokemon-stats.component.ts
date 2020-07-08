@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Pokemon } from '../../models/pokemon.model';
 import { ColorConverter } from '../../models/color-converter.model';
 import { PokeCollectionService } from 'src/app/data/collection/poke-collection.service';
+import { isNullOrUndefined } from 'util';
+import { isEmpty } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pokemon-stats',
@@ -16,14 +18,13 @@ export class PokemonStatsComponent implements OnInit {
   colorToRGBA = ColorConverter.colorToRGBA;
 
   constructor(private route: ActivatedRoute, private pokeCollectionService: PokeCollectionService) { 
-    this.route.params.subscribe( params => this.pokemonName = params.pokemon );
-    this.pokemonCollection = this.pokeCollectionService.GetPokemonCollection();
-    this.LocatePokemon();
+    this.route.params.subscribe(params => this.pokemonName = params.pokemon);
   }
 
   ngOnInit() {
     this.pokeCollectionService.collectionNotification.subscribe(updatedCollection => {
       this.pokemonCollection = updatedCollection;
+      this.LocatePokemon();
     });
   }
 

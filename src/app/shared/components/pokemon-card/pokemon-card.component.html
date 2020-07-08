@@ -1,5 +1,5 @@
 <div type="button" class="btn-light card pokemon-card border-dark mb-4 my-2" role="button" [routerLink]="['/', this.pokemon.name]">
-  <img class="card-img-top img-fluid" src={{this.pokemon.imageUrl}} alt="Pokemon Sprite Image">
+  <img class="card-img-top img-fluid" src={{this.pokemon.frontImageUrl}} alt="Pokemon Sprite Image">
   <div *ngIf="this.pokemon.types.length == 0; else typeDefined">
     <img class="pokemon-type-1" src="/assets/pokemon-type-images/unknown.png" alt="Pokemon Type 1 Image">
   </div>
