@@ -16,23 +16,72 @@
     text-align: center;
 }
 
-.wrap:before {
+.wrap-front:before { 
     content:"";
     z-index:10;
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 208px;
-    height: 208px;
+    width: 260px;
+    height: 260px;
     background:linear-gradient(transparent 0%,
       rgba(255, 255, 255, 0.1) 45%,
       rgba(255, 255, 255, 0.5) 50%,
       rgba(255, 255, 255, 0.1) 55%,
       transparent 100%);
     transform: rotate(-45deg);
-    animation: shine 1s infinite forwards;
-  }
-  @keyframes shine{
-    0%{top: -50px; left: 650px;}
-    100%{top: 100px; left: 800px;}
+    animation: shine-front 4s infinite forwards;
+}
+
+@keyframes shine-front {
+    0%{top: -93.75px; left: 755px; width: 70px;}
+    1%{top: -75px; left: 755px; width: 110px;}
+    2%{top: -56.25px; left: 755px; width: 150px;}
+    3%{top: -37.5px; left: 755px; width: 190px;}
+    4%{top: -18.75px; left: 755px; width: 230px;}
+    5%{top: 0px; left: 755px; width: 270px; }
+    6%{top: 18.75px; left: 792.5px; width: 230px;}
+    7%{top: 37.5px; left: 830px; width: 190px;}
+    8%{top: 56.25px; left: 867.5px; width: 150px;}
+    9%{top: 75px; left: 905px; width: 110px;}
+    10%{top: 93.75px; left: 942.5px; width: 70px;}
+    11%{top: 93.75px; left: 942.5px; width: 70px; opacity: 0}
+    100%{top: 93.75px; left: 942.5px; width: 70px; opacity: 0}
+}
+
+
+.wrap-behind:before { 
+  content:"";
+  z-index:10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 260px;
+  height: 260px;
+  background:linear-gradient(transparent 0%,
+    rgba(255, 255, 255, 0.1) 45%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.1) 55%,
+    transparent 100%);
+  transform: rotate(-45deg);
+  animation: shine-behind 4s infinite forwards;
+}
+
+@keyframes shine-behind {
+  0%{top: 150px; left: 755px; width: 70px;}
+  100%{top: 150px; left: 755px; width: 70px;}
+
+  0%{top: 150px; left: 755px; width: 70px;}
+  1%{top: 168.75px; left: 755px; width: 110px;}
+  2%{top: 187.5px; left: 755px; width: 150px;}
+  3%{top: 206.25px; left: 755px; width: 190px;}
+  4%{top: 225px; left: 755px; width: 230px;}
+  5%{top: 243.75px; left: 755px; width: 270px; }
+  6%{top: 262.5px; left: 792.5px; width: 230px;}
+  7%{top: 281.25px; left: 830px; width: 190px;}
+  8%{top: 300px; left: 867.5px; width: 150px;}
+  9%{top: 318.75px; left: 905px; width: 110px;}
+  10%{top: 337.5px; left: 942.5px; width: 70px;}
+  11%{top: 337.5px; left: 942.5px; width: 70px; opacity: 0}
+  100%{top: 337.5px; left: 942.5px; width: 70px; opacity: 0}
 }

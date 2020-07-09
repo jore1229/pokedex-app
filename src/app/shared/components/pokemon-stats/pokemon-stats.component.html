@@ -5,13 +5,15 @@
     <div *ngIf="this.pokemon != null">
         <div class="text-center">
             <img src={{this.pokemon.frontImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
-            <span class="wrap">
+            <span class="wrap-front">
                 <img src={{this.pokemon.frontShinyImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
             </span>
         </div>
         <div class="text-center">
             <img src={{this.pokemon.backImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
-            <img src={{this.pokemon.backShinyImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+            <span class="wrap-behind">
+                <img src={{this.pokemon.backShinyImageUrl}} class="card-img-top pokemon-card mx-2" [ngStyle]="this.AssignProfileColor(this.pokemon)" alt="...">
+            </span>
         </div>
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
